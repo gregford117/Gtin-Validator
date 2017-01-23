@@ -17,4 +17,5 @@ def Gtin(digitsToCalculate):
 		raise ValueError('Incorrect Input Length')
 
 if __name__ == '__main__':
-	Gtin(1212121)
+	#Gtin(1212121)
+	Gtin()
