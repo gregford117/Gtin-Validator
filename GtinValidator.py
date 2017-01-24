@@ -38,8 +38,3 @@ def Gsin(x):
 	Gtin(x)
 def SSCC(x):
 	Gtin(x)
-
-	
-def test():
-	print('test')
-
