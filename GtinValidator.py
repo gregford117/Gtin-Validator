@@ -10,7 +10,7 @@ def ValidInput(input_length):
 def IsEven(x):
 	return x % 2 == 0
 
-def Gtin(digitsToCalculate):
+def private Gtin(digitsToCalculate):
 	input_len = len(str(digitsToCalculate))
 
 	if ValidInput(input_len):
@@ -38,4 +38,8 @@ def Gsin(x):
 	Gtin(x)
 def SSCC(x):
 	Gtin(x)
+
+	
+def test():
+	print('test')
 
