@@ -7,20 +7,35 @@ def ValidInput(input_length):
 	allowed_lengths = [7, 11, 12, 13, 16, 17]
 	return input_length in allowed_lengths
 
+def IsEven(x):
+	return x % 2 == 0
+
 def Gtin(digitsToCalculate):
 	input_len = len(str(digitsToCalculate))
 
 	if ValidInput(input_len):
 		loop_num = 0 
+		number_sum = 0
 		for char in list(str(digitsToCalculate)):							
-			if loop_num % 2 == ( input_len % 2 ):
-				print(char)			
-			#else:
-			#	print('loop num = %s\ncurrent char = %s' % (loop_num, char))				
-
+			if int(IsEven(loop_num)) == int(IsEven(input_len + 1)):
+				number_sum += int(char) * 3
+			else:
+				number_sum += int(char)	
 			loop_num += 1
+		return RoundUp(number_sum) - number_sum
 	else:
 		raise ValueError('Incorrect Input Length')
 
-if __name__ == '__main__':	
-	Gtin(1234567)
+def Gtin8(x):
+	Gtin(x)
+def Gtin12(x):
+	Gtin(x)
+def Gtin13(x):
+	Gtin(x)
+def Gtin14(x):
+	Gtin(x)
+def Gsin(x):
+	Gtin(x)
+def SSCC(x):
+	Gtin(x)
+
