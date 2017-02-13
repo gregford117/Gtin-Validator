@@ -1,13 +1,13 @@
 from math import ceil
 
-def RoundUp(x):
+def private RoundUp(x):
 	return ceil(x / 10.0) * 10
 
-def ValidInput(input_length):
+def private ValidInput(input_length):
 	allowed_lengths = [7, 11, 12, 13, 16, 17]
 	return input_length in allowed_lengths
 
-def IsEven(x):
+def private IsEven(x):
 	return x % 2 == 0
 
 def Gtin(digitsToCalculate):
@@ -25,17 +25,3 @@ def Gtin(digitsToCalculate):
 		return RoundUp(number_sum) - number_sum
 	else:
 		raise ValueError('Incorrect Input Length')
-
-def Gtin8(x):
-	Gtin(x)
-def Gtin12(x):
-	Gtin(x)
-def Gtin13(x):
-	Gtin(x)
-def Gtin14(x):
-	Gtin(x)
-def Gsin(x):
-	Gtin(x)
-def SSCC(x):
-	Gtin(x)
-
